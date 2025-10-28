@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zipf/Heaps — Results Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Minimal, black & white, Times */
+  :root { color-scheme: light; }
+  body { font-family: "Times New Roman", Times, serif; color:#000; background:#fff; margin:32px; }
+  h1, h2 { font-weight:700; margin:0 0 8px 0; }
+  h1 { font-size:26px; }
+  h2 { font-size:18px; margin-top:28px; }
+  p, table, a { font-size:14px; color:#000; }
+  a { text-decoration: underline; }
+  table { border-collapse: collapse; width:100%; margin-top:8px; }
+  th, td { border-bottom:1px solid #000; padding:6px 8px; text-align:left; }
+  .section { margin-bottom:28px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px; }
+  figure { margin:0; }
+  figcaption { font-size:12px; margin-top:6px; }
+  img { width:100%; height:auto; border:1px solid #000; }
+  .meta { font-size:12px; margin-top:24px; }
+  .muted { opacity:0.8; }
+</style>
+</head>
+<body>
+
+<h1>Zipf/Heaps — Results Dashboard</h1>
+<p class="meta muted">
+  This static page renders figures and links to CSVs produced by the notebooks.
+  Paths assume this file lives in <code>docs/</code> and outputs live in <code>results/</code>.
+</p>
+
+<div class="section">
+  <h2>Headline CSVs</h2>
+  <ul>
+    <li><a href="../results/tables/headline_stats.csv">headline_stats.csv</a></li>
+    <li><a href="../results/tables/model_fits.csv">model_fits.csv</a></li>
+    <li><a href="../results/tables/model_comparisons.csv">model_comparisons.csv</a></li>
+    <li><a href="../results/tables/rank_freq.csv">rank_freq.csv</a></li>
+    <li><a href="../results/tables/window_s.csv">window_s.csv</a></li>
+    <li><a href="../results/heaps.csv">heaps.csv</a></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Rank–Frequency (log–log)</h2>
+  <div class="grid">
+    <figure>
+      <img src="../results/figures/rankfreq_FW_conservative.png" alt="FW conservative rank–frequency">
+      <figcaption>FW · conservative</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/rankfreq_FW_canonical.png" alt="FW canonical rank–frequency">
+      <figcaption>FW · canonical</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/rankfreq_FW_generous.png" alt="FW generous rank–frequency">
+      <figcaption>FW · generous</figcaption>
+    </figure>
+
+    <figure>
+      <img src="../results/figures/rankfreq_Ulysses_conservative.png" alt="Ulysses conservative rank–frequency">
+      <figcaption>Ulysses · conservative</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/rankfreq_Ulysses_canonical.png" alt="Ulysses canonical rank–frequency">
+      <figcaption>Ulysses · canonical</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/rankfreq_Ulysses_generous.png" alt="Ulysses generous rank–frequency">
+      <figcaption>Ulysses · generous</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Heaps’ Law</h2>
+  <div class="grid">
+    <figure>
+      <img src="../results/figures/heaps_beta_ci.png" alt="Heaps β with 95% CI">
+      <figcaption>Heaps β (95% CI)</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/heaps_synthetic_conservative.png" alt="Heaps synthetic conservative">
+      <figcaption>Heaps synthetic — conservative</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/heaps_synthetic_canonical.png" alt="Heaps synthetic canonical">
+      <figcaption>Heaps synthetic — canonical</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/heaps_synthetic_generous.png" alt="Heaps synthetic generous">
+      <figcaption>Heaps synthetic — generous</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Windowed α (stability)</h2>
+  <div class="grid">
+    <figure>
+      <img src="../results/figures/window_alpha_FW_canonical.png" alt="Windowed alpha FW canonical">
+      <figcaption>Windowed α — FW, canonical</figcaption>
+    </figure>
+    <figure>
+      <img src="../results/figures/window_alpha_Ulysses_canonical.png" alt="Windowed alpha Ulysses canonical">
+      <figcaption>Windowed α — Ulysses, canonical</figcaption>
+    </figure>
+  </div>
+</div>
+
+<p class="meta muted">
+  If an image doesn’t load, it just means the PNG isn’t present in <code>results/figures/</code>.
+  Re-run the viz notebook to regenerate figures.
+</p>
+
+</body>
+</html>
